@@ -36,8 +36,12 @@ struct Dado {
 };
 
 class Obj {
+public:
     std::vector<Dado> dados;
     std::vector<Triangulo> faces;
+
+    Obj ()
+    {}
 
     Obj (std::vector<Dado> dados, std::vector<Triangulo> faces)
     : dados(dados)
@@ -46,9 +50,10 @@ class Obj {
 };
 
 class Face_Id {
+public:
     int id_ponto;
     int id_normal;
-}
+};
 
 std::vector<Obj> ler_obj (std::string nome_obj);
 std::string nome_objeto (std::ifstream &obj);
